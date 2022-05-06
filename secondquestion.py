@@ -1,11 +1,10 @@
 import yaml
 import json
 json_data = {}
-with open("sample2.yaml", "r") as s, open("sample1.yaml", "r") as f, open("sample1.json", "w") as c, open("sample2.json", "w") as d:
+file_name = "sample2"
+with open(file_name+".yaml", "r") as s, open(file_name+".json", "w") as d:
     try:
         data1 = yaml.safe_load(s)
         json.dump(data1, d)
     except:
-        print("There is some error in sample2.yaml file.", e)
-        data2 = yaml.safe_load(f)
-        json.dump(data2, c)
+        print(f"There is some error in {file_name}.yaml file.")
