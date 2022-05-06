@@ -6,6 +6,6 @@ with open("sample2.yaml", "r") as s, open("sample1.yaml", "r") as f, open("sampl
         data1 = yaml.safe_load(s)
         json.dump(data1, d)
     except:
-        print("There is some error in sample2.yaml file.")
+        print("There is some error in sample2.yaml file.", e)
         data2 = yaml.safe_load(f)
         json.dump(data2, c)
